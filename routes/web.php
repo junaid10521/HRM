@@ -25,16 +25,21 @@ Route::prefix('users')->group(function () {
 
 Route::prefix('roles')->group(function () {
     Route::get('roles-list','admin\roles\RolesController@index');
+    Route::get('create-roles','admin\roles\RolesController@create');
 });
 
 Route::prefix('employees')->group(function () {
     Route::get('employees-list','admin\employees\EmployeesController@index');
+    Route::get('create-employees','admin\employees\EmployeesController@create');
 });
 
 Route::prefix('companies')->group(function () {
     Route::get('companies-list','admin\companies\CompaniesController@index');
+    Route::get('create-company','admin\companies\CompaniesController@create');
+
 });
 
 Route::prefix('permissions')->group(function () {
     Route::get('permissions-list','admin\permissions\PermissionsController@index');
+    Route::get('create-permissions','admin\permissions\PermissionsController@create');
 });
